@@ -1,0 +1,16 @@
+f = open('data1.txt', 'r')
+data = f.read()
+
+data = data.split('\n')
+
+data = [int(i) for i in data]
+data.append(0)
+
+count = 0
+for i in range(len(data)-1):
+    if data[i+1] > data[i]:
+        count += 1
+
+print(count)
+
+
